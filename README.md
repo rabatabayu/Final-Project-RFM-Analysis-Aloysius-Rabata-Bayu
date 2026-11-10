@@ -90,4 +90,98 @@ Customer purchasing behavior was summarized using three metrics.
 | Frequency | Number of purchasing transactions | Higher values indicate more frequent purchasing |
 | Monetary | Total net purchasing value | Higher values indicate greater historical customer value |
 
-Each customer received an R, F, and
+Each customer received an R, F, and M score from **1 to 5**, using a percentile-based ranking approach.
+
+- **Recency:** Lower Recency receives a higher score.
+- **Frequency:** Higher Frequency receives a higher score.
+- **Monetary:** Higher Monetary receives a higher score.
+
+A customized **rule-based segmentation** approach was then applied to classify customers into eight segments.
+
+The segment definitions are analytical rules adapted for this project rather than universal RFM thresholds.
+
+### 4. Customer Segmentation
+
+| Customer Segment | Customers | Business Priority |
+|---|---:|---|
+| Champions | 910 | High |
+| Loyal Customers | 379 | High |
+| Potential Loyalists | 484 | High |
+| High-Value At Risk | 142 | Critical |
+| At Risk | 614 | Medium |
+| Needs Attention | 599 | Medium |
+| Recent Low-Frequency | 238 | Medium |
+| Hibernating | 968 | Low |
+| **Total** | **4,334** | |
+
+Segmentation enables the company to distinguish valuable and active customers from those requiring development, reactivation, or lower-cost engagement strategies.
+
+## Key Business Findings
+
+### 1. Customer Value Is Highly Concentrated
+
+**21% of customers generate 66.01% of total Net Monetary.**
+
+- Champions account for 910 customers, contributing approximately **£5.47 million** in historical Net Monetary.
+- Hibernating represents the largest customer segment by count (22.34%) but contributes only **4.18%** of Net Monetary.
+
+**Business Insight:** A relatively small proportion of customers contributes most of the business's historical customer value.
+
+**Recommendation:** Prioritize Champions through VIP rewards, exclusive benefits, and loyalty programs while developing customers with growth potential.
+
+### 2. Champions and Potential Loyalists Support Revenue Growth
+
+Monthly Net Revenue increased from approximately **£923,569 in September 2011 to £1,118,220 in November 2011**, representing growth of **21.1%**.
+
+Customer segment analysis found:
+
+- Champions: approximately **+£194,839**
+- Potential Loyalists: approximately **+£116,166**
+
+Other segments experienced declining contributions, partially offsetting these increases.
+
+**Business Insight:** The observed revenue growth was primarily supported by customers classified as Champions and Potential Loyalists.
+
+**Recommendation:** Protect high-value relationships and encourage potential loyal customers to purchase more frequently.
+
+*Note: Monthly contributions use the final RFM segment assignments, not the customers' historical segment membership in each month.*
+
+### 3. Repeat Purchasing Is Strongly Associated with Customer Value
+
+The analysis identified a **65.27% Repeat Purchase Rate**, with 2,829 out of 4,334 customers purchasing more than once.
+
+Spearman correlation results:
+
+| Variable Relationship | Correlation |
+|---|---:|
+| Frequency vs. Monetary | +0.806 |
+| Recency vs. Frequency | -0.564 |
+| Recency vs. Monetary | -0.485 |
+
+**Business Insight:** Customers who purchase more frequently and more recently tend to have higher historical purchasing values.
+
+**Recommendation:** Encourage repeat purchases through loyalty initiatives, personalized product recommendations, and targeted incentives.
+
+*Correlation indicates association, not causation.*
+
+### 4. At-Risk Customers Represent Significant Historical Value
+
+Two customer segments require particular attention:
+
+| Segment | Customers | Historical Net Monetary |
+|---|---:|---:|
+| High-Value At Risk | 142 | £331,348 |
+| At Risk | 614 | £515,190 |
+| **Combined** | **756** | **£846,538** |
+
+Together, these customers account for approximately **10.22% of total historical Net Monetary**.
+
+**Business Insight:** Previously valuable customers are showing reduced purchasing activity, creating a potential retention risk.
+
+**Recommendation:** Prioritize personalized win-back campaigns for High-Value At Risk customers and targeted reactivation campaigns for At Risk customers.
+
+*Historical Monetary is not a forecast of recoverable revenue.*
+
+## Power BI Dashboard
+
+Two interactive dashboards were developed to translate analytical findings into business insights
